@@ -54,7 +54,7 @@ from os import getenv
 
 MetaRos_RepoURL = getenv('MCF_META_ROS_REPO_URL', 'https://github.com/mission-robotics/meta-ros.git')
 MetaRos_Branch  = getenv('MCF_META_ROS_BRANCH',   'iron-kirkstone')
-MetaRos_Commit  = getenv('MCF_META_ROS_COMMIT',   '3f6caa01a7e25f')
+MetaRos_Commit  = getenv('MCF_META_ROS_COMMIT',   '83f8e1a17f8a7164f5f8c8f062991eb05438497e')
 
 
 # Layers = [
@@ -68,14 +68,14 @@ Layers = [
 
 ('meta',                                5, 'https://github.com/openembedded/openembedded-core.git',  {'branch': OE_Branch,            'commit': 'e1a604db'},        {}),
 
-('meta-oe',                            10, 'https://github.com/openembedded/meta-openembedded.git',  {'branch': OE_Branch,            'commit': '67df2ce4c9'},        {}),
+('meta-oe',                            10, 'https://github.com/openembedded/meta-openembedded.git',  {'branch': OE_Branch,            'commit': '9c5541f7'},        {}),
 ('meta-python',                        13, 'https://github.com/openembedded/meta-openembedded.git',  {},                                                              {}),
 
 ('meta-ros-common',                    37, MetaRos_RepoURL,                                          {'branch': MetaRos_Branch,       'commit': MetaRos_Commit},      {}),
 ('meta-ros2',                          38, MetaRos_RepoURL,                                          {},                                                              {}),
 ('meta-ros2-' + ROS_Distribution,      39, MetaRos_RepoURL,                                          {},                                                              {}),
 
-('meta-raspberrypi',                   50, 'https://github.com/agherzan/meta-raspberrypi.git',       {'branch': OE_Branch,            'commit': '8367553'},           {}),
+('meta-raspberrypi',                   50, 'https://github.com/agherzan/meta-raspberrypi.git',       {'branch': OE_Branch,            'commit': '59a6a1b5dd1'},           {}),
 ]
 
 # BblayersConfExtraLines is a list of strings to be appended to the generated
