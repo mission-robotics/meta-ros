@@ -272,6 +272,8 @@ libssl-dev:
 - openssl@openembedded-core
 libtheora:
 - libtheora@openembedded-core
+libtins-dev:
+- ${ROS_UNRESOLVED_DEP-libtins-dev}
 libturbojpeg:
 - libjpeg-turbo@openembedded-core
 libudev-dev:
@@ -311,9 +313,9 @@ libxrandr:
 libxxf86vm:
 - libxxf86vm@openembedded-core
 libyaml:
-- libyaml@openembedded-core
+- ${ROS_UNRESOLVED_DEP-libyaml}
 libyaml-dev:
-- libyaml@openembedded-core
+- ${ROS_UNRESOLVED_DEP-libyaml-dev}
 libzmq3-dev:
 - zeromq@meta-oe
 libzstd-dev:
