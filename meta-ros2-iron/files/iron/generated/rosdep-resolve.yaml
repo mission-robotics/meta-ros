@@ -401,7 +401,7 @@ python3-importlib-metadata:
 python3-importlib-resources:
 - python3@openembedded-core
 python3-jinja2:
-- ${ROS_UNRESOLVED_DEP-python3-jinja2}
+- python3-jinja2@openembedded-core
 python3-jsonschema:
 - ${ROS_UNRESOLVED_DEP-python3-jsonschema}
 python3-lark-parser:

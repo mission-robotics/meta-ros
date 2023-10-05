@@ -17,27 +17,27 @@ ROS_CN = "generate_parameter_library"
 ROS_BPN = "generate_parameter_library_py"
 
 ROS_BUILD_DEPENDS = " \
-    ${ROS_UNRESOLVED_DEP-python3-jinja2} \
     ${ROS_UNRESOLVED_DEP-python3-typeguard} \
     python3 \
+    python3-jinja2 \
     python3-pyyaml \
 "
 
 ROS_BUILDTOOL_DEPENDS = ""
 
 ROS_EXPORT_DEPENDS = " \
-    ${ROS_UNRESOLVED_DEP-python3-jinja2} \
     ${ROS_UNRESOLVED_DEP-python3-typeguard} \
     python3 \
+    python3-jinja2 \
     python3-pyyaml \
 "
 
 ROS_BUILDTOOL_EXPORT_DEPENDS = ""
 
 ROS_EXEC_DEPENDS = " \
-    ${ROS_UNRESOLVED_DEP-python3-jinja2} \
     ${ROS_UNRESOLVED_DEP-python3-typeguard} \
     python3 \
+    python3-jinja2 \
     python3-pyyaml \
 "
 

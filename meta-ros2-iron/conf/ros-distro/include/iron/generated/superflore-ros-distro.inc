@@ -3644,7 +3644,6 @@ ROS_SUPERFLORE_GENERATED_PLATFORM_PACKAGE_DEPENDENCIES = " \
     ${ROS_UNRESOLVED_DEP-python3-fiona} \
     ${ROS_UNRESOLVED_DEP-python3-git} \
     ${ROS_UNRESOLVED_DEP-python3-img2pdf} \
-    ${ROS_UNRESOLVED_DEP-python3-jinja2} \
     ${ROS_UNRESOLVED_DEP-python3-jsonschema} \
     ${ROS_UNRESOLVED_DEP-python3-natsort} \
     ${ROS_UNRESOLVED_DEP-python3-ntplib} \
@@ -3770,6 +3769,7 @@ ROS_SUPERFLORE_GENERATED_PLATFORM_PACKAGE_DEPENDENCIES = " \
     python3-flake8 \
     python3-future \
     python3-importlib-metadata \
+    python3-jinja2 \
     python3-lark-parser \
     python3-lxml \
     python3-matplotlib \
@@ -4387,7 +4387,6 @@ ROS_UNRESOLVED_DEP-python3-construct = "ROS_UNRESOLVED_DEP-python3-construct"
 ROS_UNRESOLVED_DEP-python3-fiona = "ROS_UNRESOLVED_DEP-python3-fiona"
 ROS_UNRESOLVED_DEP-python3-git = "ROS_UNRESOLVED_DEP-python3-git"
 ROS_UNRESOLVED_DEP-python3-img2pdf = "ROS_UNRESOLVED_DEP-python3-img2pdf"
-ROS_UNRESOLVED_DEP-python3-jinja2 = "ROS_UNRESOLVED_DEP-python3-jinja2"
 ROS_UNRESOLVED_DEP-python3-jsonschema = "ROS_UNRESOLVED_DEP-python3-jsonschema"
 ROS_UNRESOLVED_DEP-python3-natsort = "ROS_UNRESOLVED_DEP-python3-natsort"
 ROS_UNRESOLVED_DEP-python3-ntplib = "ROS_UNRESOLVED_DEP-python3-ntplib"
@@ -4408,3 +4407,17 @@ ROS_UNRESOLVED_DEP-spacenavd = "ROS_UNRESOLVED_DEP-spacenavd"
 ROS_UNRESOLVED_DEP-sqlite3 = "ROS_UNRESOLVED_DEP-sqlite3"
 ROS_UNRESOLVED_DEP-xsimd = "ROS_UNRESOLVED_DEP-xsimd"
 ROS_UNRESOLVED_DEP-xtensor = "ROS_UNRESOLVED_DEP-xtensor"
+
+# From the release announcement or the last field of the "<ROS_DISTRO>/YYYY-MM-DD" tag for the release in
+# https://github.com/ros/rosdistro/tags. Prior to the first release of a ROS_DISTRO, it is set to "".
+ROS_DISTRO_RELEASE_DATE = "2023-05-23"
+
+# The commit of ros/rosdistro/iron/distribution.yaml from which the recipes were generated.
+ROS_SUPERFLORE_GENERATION_COMMIT = "f86df4a050a4a492e3ea78e91f83581b965d810b"
+
+# Version of scripts/ros-generate-cache.sh which was used to generate cache from which the recipes and this configuration
+# file were last generated
+ROS_GENERATE_CACHE_PROGRAM_VERSION = "1.7.0"
+
+# Version of scripts/ros-generate-recipes.sh which was used to generate recipes and this configuration file
+ROS_GENERATE_RECIPES_PROGRAM_VERSION = "1.7.0"
