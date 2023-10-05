@@ -18,7 +18,12 @@ ROS_PYTHON_VERSION = "3"
 ROS_SUPERFLORE_GENERATION_SKIP_LIST = ""
 
 # Superflore was unable to generate recipes for these packages, eg, because their repositories are not on GitHub.
-ROS_SUPERFLORE_GENERATION_NOT_POSSIBLE = ""
+ROS_SUPERFLORE_GENERATION_NOT_POSSIBLE = " \
+    rosbridge_msgs \
+    rosidl_cli \
+    rosidl_runtime_py \
+    rqt_action \
+"
 
 # Number of commits that will be returned by "git log meta-ros2-iron/files/iron/generated/cache.yaml" when the
 # generated files are committed. This is used for the fourth version field of DISTRO_VERSION.
@@ -883,13 +888,11 @@ ROS_SUPERFLORE_GENERATED_RECIPES = " \
     rosbag2-tests \
     rosbag2-transport \
     rosbridge-library \
-    rosbridge-msgs \
     rosbridge-server \
     rosbridge-suite \
     rosbridge-test-msgs \
     rosgraph-msgs \
     rosidl-adapter \
-    rosidl-cli \
     rosidl-cmake \
     rosidl-core-generators \
     rosidl-core-runtime \
@@ -906,7 +909,6 @@ ROS_SUPERFLORE_GENERATED_RECIPES = " \
     rosidl-pycommon \
     rosidl-runtime-c \
     rosidl-runtime-cpp \
-    rosidl-runtime-py \
     rosidl-typesupport-c \
     rosidl-typesupport-cpp \
     rosidl-typesupport-fastrtps-c \
@@ -918,7 +920,6 @@ ROS_SUPERFLORE_GENERATED_RECIPES = " \
     rplidar-ros \
     rpyutils \
     rqt \
-    rqt-action \
     rqt-bag \
     rqt-bag-plugins \
     rqt-common-plugins \
@@ -2046,13 +2047,11 @@ ROS_SUPERFLORE_GENERATED_RECIPE_BASENAMES_WITH_COMPONENT = " \
                                   rosbag2/rosbag2-tests_0.22.3-1 \
                                   rosbag2/rosbag2-transport_0.22.3-1 \
                           rosbridge-suite/rosbridge-library_1.3.1-3 \
-                          rosbridge-suite/rosbridge-msgs_1.3.1-3 \
                           rosbridge-suite/rosbridge-server_1.3.1-3 \
                           rosbridge-suite/rosbridge-suite_1.3.1-3 \
                           rosbridge-suite/rosbridge-test-msgs_1.3.1-3 \
                            rcl-interfaces/rosgraph-msgs_1.6.0-2 \
                                    rosidl/rosidl-adapter_4.0.1-1 \
-                                   rosidl/rosidl-cli_4.0.1-1 \
                                    rosidl/rosidl-cmake_4.0.1-1 \
                               rosidl-core/rosidl-core-generators_0.1.1-3 \
                               rosidl-core/rosidl-core-runtime_0.1.1-3 \
@@ -2069,7 +2068,6 @@ ROS_SUPERFLORE_GENERATED_RECIPE_BASENAMES_WITH_COMPONENT = " \
                                    rosidl/rosidl-pycommon_4.0.1-1 \
                                    rosidl/rosidl-runtime-c_4.0.1-1 \
                                    rosidl/rosidl-runtime-cpp_4.0.1-1 \
-                        rosidl-runtime-py/rosidl-runtime-py_0.12.0-2 \
                        rosidl-typesupport/rosidl-typesupport-c_3.0.1-1 \
                        rosidl-typesupport/rosidl-typesupport-cpp_3.0.1-1 \
               rosidl-typesupport-fastrtps/rosidl-typesupport-fastrtps-c_3.0.1-1 \
@@ -2081,7 +2079,6 @@ ROS_SUPERFLORE_GENERATED_RECIPE_BASENAMES_WITH_COMPONENT = " \
                               rplidar-ros/rplidar-ros_2.1.0-3 \
                                  rpyutils/rpyutils_0.3.2-3 \
                                       rqt/rqt_1.3.3-1 \
-                               rqt-action/rqt-action_2.1.2-3 \
                                   rqt-bag/rqt-bag_1.3.4-1 \
                                   rqt-bag/rqt-bag-plugins_1.3.4-1 \
                        rqt-common-plugins/rqt-common-plugins_1.2.0-3 \
@@ -3182,12 +3179,10 @@ ROS_SUPERFLORE_GENERATED_WORLD_PACKAGES = " \
     rosbag2-storage-sqlite3 \
     rosbag2-transport \
     rosbridge-library \
-    rosbridge-msgs \
     rosbridge-server \
     rosbridge-suite \
     rosgraph-msgs \
     rosidl-adapter \
-    rosidl-cli \
     rosidl-cmake \
     rosidl-core-generators \
     rosidl-core-runtime \
@@ -3204,7 +3199,6 @@ ROS_SUPERFLORE_GENERATED_WORLD_PACKAGES = " \
     rosidl-pycommon \
     rosidl-runtime-c \
     rosidl-runtime-cpp \
-    rosidl-runtime-py \
     rosidl-typesupport-c \
     rosidl-typesupport-cpp \
     rosidl-typesupport-fastrtps-c \
@@ -3216,7 +3210,6 @@ ROS_SUPERFLORE_GENERATED_WORLD_PACKAGES = " \
     rplidar-ros \
     rpyutils \
     rqt \
-    rqt-action \
     rqt-bag \
     rqt-bag-plugins \
     rqt-common-plugins \
@@ -4200,7 +4193,6 @@ ROS_SUPERFLORE_GENERATED_RECIPES_FOR_COMPONENTS = " \
     rosidl-dynamic-typesupport \
     rosidl-dynamic-typesupport-fastrtps \
     rosidl-python \
-    rosidl-runtime-py \
     rosidl-typesupport \
     rosidl-typesupport-fastrtps \
     rospy-message-converter \
@@ -4208,7 +4200,6 @@ ROS_SUPERFLORE_GENERATED_RECIPES_FOR_COMPONENTS = " \
     rplidar-ros \
     rpyutils \
     rqt \
-    rqt-action \
     rqt-bag \
     rqt-common-plugins \
     rqt-console \
