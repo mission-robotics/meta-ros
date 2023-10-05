@@ -6530,6 +6530,7 @@ python3-jinja2:
   fedora: [python3-jinja2]
   gentoo: [=dev-python/jinja-2*]
   nixos: [python3Packages.jinja2]
+  openembedded: [python3-jinja2@openembedded-core]
   rhel:
     '*': [python3-jinja2]
     '7': [python36-jinja2]
