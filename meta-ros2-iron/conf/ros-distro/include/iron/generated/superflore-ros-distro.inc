@@ -18,16 +18,11 @@ ROS_PYTHON_VERSION = "3"
 ROS_SUPERFLORE_GENERATION_SKIP_LIST = ""
 
 # Superflore was unable to generate recipes for these packages, eg, because their repositories are not on GitHub.
-ROS_SUPERFLORE_GENERATION_NOT_POSSIBLE = " \
-    rosbridge_msgs \
-    rosidl_cli \
-    rosidl_runtime_py \
-    rqt_action \
-"
+ROS_SUPERFLORE_GENERATION_NOT_POSSIBLE = ""
 
 # Number of commits that will be returned by "git log meta-ros2-iron/files/iron/generated/cache.yaml" when the
 # generated files are committed. This is used for the fourth version field of DISTRO_VERSION.
-ROS_NUM_CACHE_YAML_COMMITS = "4"
+ROS_NUM_CACHE_YAML_COMMITS = "6"
 
 # Iterated values of ROS_DISTRO-cache.distribution_file.release_platforms.<LINUX-DISTRO>.[ <NAME> ... ] .
 ROS_DISTRO_RELEASE_PLATFORMS = " \
@@ -888,11 +883,13 @@ ROS_SUPERFLORE_GENERATED_RECIPES = " \
     rosbag2-tests \
     rosbag2-transport \
     rosbridge-library \
+    rosbridge-msgs \
     rosbridge-server \
     rosbridge-suite \
     rosbridge-test-msgs \
     rosgraph-msgs \
     rosidl-adapter \
+    rosidl-cli \
     rosidl-cmake \
     rosidl-core-generators \
     rosidl-core-runtime \
@@ -909,6 +906,7 @@ ROS_SUPERFLORE_GENERATED_RECIPES = " \
     rosidl-pycommon \
     rosidl-runtime-c \
     rosidl-runtime-cpp \
+    rosidl-runtime-py \
     rosidl-typesupport-c \
     rosidl-typesupport-cpp \
     rosidl-typesupport-fastrtps-c \
@@ -920,6 +918,7 @@ ROS_SUPERFLORE_GENERATED_RECIPES = " \
     rplidar-ros \
     rpyutils \
     rqt \
+    rqt-action \
     rqt-bag \
     rqt-bag-plugins \
     rqt-common-plugins \
@@ -2047,11 +2046,13 @@ ROS_SUPERFLORE_GENERATED_RECIPE_BASENAMES_WITH_COMPONENT = " \
                                   rosbag2/rosbag2-tests_0.22.3-1 \
                                   rosbag2/rosbag2-transport_0.22.3-1 \
                           rosbridge-suite/rosbridge-library_1.3.1-3 \
+                          rosbridge-suite/rosbridge-msgs_1.3.1-3 \
                           rosbridge-suite/rosbridge-server_1.3.1-3 \
                           rosbridge-suite/rosbridge-suite_1.3.1-3 \
                           rosbridge-suite/rosbridge-test-msgs_1.3.1-3 \
                            rcl-interfaces/rosgraph-msgs_1.6.0-2 \
                                    rosidl/rosidl-adapter_4.0.1-1 \
+                                   rosidl/rosidl-cli_4.0.1-1 \
                                    rosidl/rosidl-cmake_4.0.1-1 \
                               rosidl-core/rosidl-core-generators_0.1.1-3 \
                               rosidl-core/rosidl-core-runtime_0.1.1-3 \
@@ -2068,6 +2069,7 @@ ROS_SUPERFLORE_GENERATED_RECIPE_BASENAMES_WITH_COMPONENT = " \
                                    rosidl/rosidl-pycommon_4.0.1-1 \
                                    rosidl/rosidl-runtime-c_4.0.1-1 \
                                    rosidl/rosidl-runtime-cpp_4.0.1-1 \
+                        rosidl-runtime-py/rosidl-runtime-py_0.12.0-2 \
                        rosidl-typesupport/rosidl-typesupport-c_3.0.1-1 \
                        rosidl-typesupport/rosidl-typesupport-cpp_3.0.1-1 \
               rosidl-typesupport-fastrtps/rosidl-typesupport-fastrtps-c_3.0.1-1 \
@@ -2079,6 +2081,7 @@ ROS_SUPERFLORE_GENERATED_RECIPE_BASENAMES_WITH_COMPONENT = " \
                               rplidar-ros/rplidar-ros_2.1.0-3 \
                                  rpyutils/rpyutils_0.3.2-3 \
                                       rqt/rqt_1.3.3-1 \
+                               rqt-action/rqt-action_2.1.2-3 \
                                   rqt-bag/rqt-bag_1.3.4-1 \
                                   rqt-bag/rqt-bag-plugins_1.3.4-1 \
                        rqt-common-plugins/rqt-common-plugins_1.2.0-3 \
@@ -3179,10 +3182,12 @@ ROS_SUPERFLORE_GENERATED_WORLD_PACKAGES = " \
     rosbag2-storage-sqlite3 \
     rosbag2-transport \
     rosbridge-library \
+    rosbridge-msgs \
     rosbridge-server \
     rosbridge-suite \
     rosgraph-msgs \
     rosidl-adapter \
+    rosidl-cli \
     rosidl-cmake \
     rosidl-core-generators \
     rosidl-core-runtime \
@@ -3199,6 +3204,7 @@ ROS_SUPERFLORE_GENERATED_WORLD_PACKAGES = " \
     rosidl-pycommon \
     rosidl-runtime-c \
     rosidl-runtime-cpp \
+    rosidl-runtime-py \
     rosidl-typesupport-c \
     rosidl-typesupport-cpp \
     rosidl-typesupport-fastrtps-c \
@@ -3210,6 +3216,7 @@ ROS_SUPERFLORE_GENERATED_WORLD_PACKAGES = " \
     rplidar-ros \
     rpyutils \
     rqt \
+    rqt-action \
     rqt-bag \
     rqt-bag-plugins \
     rqt-common-plugins \
@@ -3625,10 +3632,7 @@ ROS_SUPERFLORE_GENERATED_PLATFORM_PACKAGE_DEPENDENCIES = " \
     ${ROS_UNRESOLVED_DEP-libqt5-svg} \
     ${ROS_UNRESOLVED_DEP-libspnav-dev} \
     ${ROS_UNRESOLVED_DEP-libtins-dev} \
-    ${ROS_UNRESOLVED_DEP-libyaml-dev} \
-    ${ROS_UNRESOLVED_DEP-libyaml} \
     ${ROS_UNRESOLVED_DEP-lttng-tools} \
-    ${ROS_UNRESOLVED_DEP-matio} \
     ${ROS_UNRESOLVED_DEP-ocl-icd-opencl-dev} \
     ${ROS_UNRESOLVED_DEP-opende} \
     ${ROS_UNRESOLVED_DEP-python3-babeltrace} \
@@ -3640,7 +3644,6 @@ ROS_SUPERFLORE_GENERATED_PLATFORM_PACKAGE_DEPENDENCIES = " \
     ${ROS_UNRESOLVED_DEP-python3-ntplib} \
     ${ROS_UNRESOLVED_DEP-python3-pytest-timeout} \
     ${ROS_UNRESOLVED_DEP-python3-rtree} \
-    ${ROS_UNRESOLVED_DEP-python3-scipy} \
     ${ROS_UNRESOLVED_DEP-python3-shapely} \
     ${ROS_UNRESOLVED_DEP-python3-vcstool-native} \
     ${ROS_UNRESOLVED_DEP-python3-zmq} \
@@ -3730,6 +3733,7 @@ ROS_SUPERFLORE_GENERATED_PLATFORM_PACKAGE_DEPENDENCIES = " \
     lttng-ust \
     lua \
     lz4 \
+    matio \
     mesa \
     ncurses \
     nlohmann-json \
@@ -3793,6 +3797,7 @@ ROS_SUPERFLORE_GENERATED_PLATFORM_PACKAGE_DEPENDENCIES = " \
     python3-rosdistro \
     python3-rospkg \
     python3-rospkg-native \
+    python3-scipy \
     python3-setuptools \
     python3-setuptools-native \
     python3-sphinx \
@@ -3844,7 +3849,6 @@ ROS_SUPERFLORE_GENERATED_TESTS = " \
     ${ROS_UNRESOLVED_DEP-iwyu} \
     ${ROS_UNRESOLVED_DEP-libclang-dev} \
     ${ROS_UNRESOLVED_DEP-libcunit-dev} \
-    ${ROS_UNRESOLVED_DEP-matio} \
     ${ROS_UNRESOLVED_DEP-python3-pytest-timeout} \
     ${ROS_UNRESOLVED_DEP-python3-zmq} \
     ament-clang-format \
@@ -3861,6 +3865,7 @@ ROS_SUPERFLORE_GENERATED_TESTS = " \
     apex-test-tools \
     kinematics-interface-kdl \
     launch-pytest \
+    matio \
     mimick-vendor \
     moveit-resources-prbt-pg70-support \
     nodl-to-policy \
@@ -4193,6 +4198,7 @@ ROS_SUPERFLORE_GENERATED_RECIPES_FOR_COMPONENTS = " \
     rosidl-dynamic-typesupport \
     rosidl-dynamic-typesupport-fastrtps \
     rosidl-python \
+    rosidl-runtime-py \
     rosidl-typesupport \
     rosidl-typesupport-fastrtps \
     rospy-message-converter \
@@ -4200,6 +4206,7 @@ ROS_SUPERFLORE_GENERATED_RECIPES_FOR_COMPONENTS = " \
     rplidar-ros \
     rpyutils \
     rqt \
+    rqt-action \
     rqt-bag \
     rqt-common-plugins \
     rqt-console \
@@ -4366,10 +4373,7 @@ ROS_UNRESOLVED_DEP-libqt5-quick = "ROS_UNRESOLVED_DEP-libqt5-quick"
 ROS_UNRESOLVED_DEP-libqt5-svg = "ROS_UNRESOLVED_DEP-libqt5-svg"
 ROS_UNRESOLVED_DEP-libspnav-dev = "ROS_UNRESOLVED_DEP-libspnav-dev"
 ROS_UNRESOLVED_DEP-libtins-dev = "ROS_UNRESOLVED_DEP-libtins-dev"
-ROS_UNRESOLVED_DEP-libyaml = "ROS_UNRESOLVED_DEP-libyaml"
-ROS_UNRESOLVED_DEP-libyaml-dev = "ROS_UNRESOLVED_DEP-libyaml-dev"
 ROS_UNRESOLVED_DEP-lttng-tools = "ROS_UNRESOLVED_DEP-lttng-tools"
-ROS_UNRESOLVED_DEP-matio = "ROS_UNRESOLVED_DEP-matio"
 ROS_UNRESOLVED_DEP-ocl-icd-opencl-dev = "ROS_UNRESOLVED_DEP-ocl-icd-opencl-dev"
 ROS_UNRESOLVED_DEP-opende = "ROS_UNRESOLVED_DEP-opende"
 ROS_UNRESOLVED_DEP-python3-babeltrace = "ROS_UNRESOLVED_DEP-python3-babeltrace"
@@ -4381,7 +4385,6 @@ ROS_UNRESOLVED_DEP-python3-img2pdf = "ROS_UNRESOLVED_DEP-python3-img2pdf"
 ROS_UNRESOLVED_DEP-python3-ntplib = "ROS_UNRESOLVED_DEP-python3-ntplib"
 ROS_UNRESOLVED_DEP-python3-pytest-timeout = "ROS_UNRESOLVED_DEP-python3-pytest-timeout"
 ROS_UNRESOLVED_DEP-python3-rtree = "ROS_UNRESOLVED_DEP-python3-rtree"
-ROS_UNRESOLVED_DEP-python3-scipy = "ROS_UNRESOLVED_DEP-python3-scipy"
 ROS_UNRESOLVED_DEP-python3-shapely = "ROS_UNRESOLVED_DEP-python3-shapely"
 ROS_UNRESOLVED_DEP-python3-vcstool-native = "ROS_UNRESOLVED_DEP-python3-vcstool-native"
 ROS_UNRESOLVED_DEP-python3-zmq = "ROS_UNRESOLVED_DEP-python3-zmq"
@@ -4399,7 +4402,7 @@ ROS_UNRESOLVED_DEP-xtensor = "ROS_UNRESOLVED_DEP-xtensor"
 ROS_DISTRO_RELEASE_DATE = "2023-05-23"
 
 # The commit of ros/rosdistro/iron/distribution.yaml from which the recipes were generated.
-ROS_SUPERFLORE_GENERATION_COMMIT = "caca4bd7d9ed64866d425cb8f9cc78e6e510704e"
+ROS_SUPERFLORE_GENERATION_COMMIT = "aa2423e6160cd56b1db7589cdc8c49a766a0be1e"
 
 # Version of scripts/ros-generate-cache.sh which was used to generate cache from which the recipes and this configuration
 # file were last generated

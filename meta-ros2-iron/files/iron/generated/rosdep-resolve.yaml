@@ -313,9 +313,9 @@ libxrandr:
 libxxf86vm:
 - libxxf86vm@openembedded-core
 libyaml:
-- ${ROS_UNRESOLVED_DEP-libyaml}
+- libyaml@openembedded-core
 libyaml-dev:
-- ${ROS_UNRESOLVED_DEP-libyaml-dev}
+- libyaml@openembedded-core
 libzmq3-dev:
 - zeromq@meta-oe
 libzstd-dev:
@@ -327,7 +327,7 @@ lua5.2-dev:
 lz4:
 - lz4@openembedded-core
 matio:
-- ${ROS_UNRESOLVED_DEP-matio}
+- matio@meta-ros-common
 nlohmann-json-dev:
 - nlohmann-json@meta-oe
 ocl-icd-opencl-dev:
@@ -471,7 +471,7 @@ python3-rospkg-modules:
 python3-rtree:
 - ${ROS_UNRESOLVED_DEP-python3-rtree}
 python3-scipy:
-- ${ROS_UNRESOLVED_DEP-python3-scipy}
+- python3-scipy@meta-ros-common
 python3-serial:
 - python3-pyserial@meta-python
 python3-setuptools:

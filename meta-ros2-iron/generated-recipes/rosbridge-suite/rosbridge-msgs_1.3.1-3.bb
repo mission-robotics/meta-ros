@@ -5,20 +5,24 @@
 inherit ros_distro_iron
 inherit ros_superflore_generated
 
-DESCRIPTION = "This packages proposes a slider-based publisher node similar to the joint_state_publisher, but that can publish any type of message or call services."
-AUTHOR = "Olivier Kermorgant <olivier.kermorgant@ec-nantes.fr>"
+DESCRIPTION = "Package containing message files"
+AUTHOR = "Hans-Joachim Krauch <achim@intermodalics.eu>"
+ROS_AUTHOR = "Hans-Joachim Krauch <achim@intermodalics.eu>"
 HOMEPAGE = "https://wiki.ros.org"
 SECTION = "devel"
-LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://package.xml;beginline=10;endline=10;md5=58e54c03ca7f821dd3967e2a2cd1596e"
+LICENSE = "BSD"
+LIC_FILES_CHKSUM = "file://package.xml;beginline=11;endline=11;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-ROS_CN = "slider_publisher"
-ROS_BPN = "slider_publisher"
+ROS_CN = "rosbridge_suite"
+ROS_BPN = "rosbridge_msgs"
 
-ROS_BUILD_DEPENDS = ""
+ROS_BUILD_DEPENDS = " \
+    builtin-interfaces \
+"
 
 ROS_BUILDTOOL_DEPENDS = " \
-    ament-cmake-native \
+    ament-cmake-ros-native \
+    rosidl-default-generators-native \
 "
 
 ROS_EXPORT_DEPENDS = ""
@@ -26,9 +30,7 @@ ROS_EXPORT_DEPENDS = ""
 ROS_BUILDTOOL_EXPORT_DEPENDS = ""
 
 ROS_EXEC_DEPENDS = " \
-    python3-numpy \
-    python3-scipy \
-    rqt-gui-py \
+    rosidl-default-runtime \
 "
 
 # Currently informational only -- see http://www.ros.org/reps/rep-0149.html#dependency-tags.
@@ -41,10 +43,10 @@ DEPENDS += "${ROS_EXPORT_DEPENDS} ${ROS_BUILDTOOL_EXPORT_DEPENDS}"
 
 RDEPENDS_${PN} += "${ROS_EXEC_DEPENDS}"
 
-# matches with: https://github.com/ros2-gbp/slider_publisher-release/archive/release/iron/slider_publisher/2.2.1-3.tar.gz
-ROS_BRANCH ?= "branch=release/iron/slider_publisher"
-SRC_URI = "git://github.com/ros2-gbp/slider_publisher-release;${ROS_BRANCH};protocol=https"
-SRCREV = "bfdb40a919f8c646965912b10d08f5d9aba961b8"
+# matches with: https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/iron/rosbridge_msgs/1.3.1-3.tar.gz
+ROS_BRANCH ?= "branch=release/iron/rosbridge_msgs"
+SRC_URI = "git://github.com/ros2-gbp/rosbridge_suite-release;${ROS_BRANCH};protocol=https"
+SRCREV = "2c8695378f15884a6a55aa308991b543f39b8511"
 S = "${WORKDIR}/git"
 
 ROS_BUILD_TYPE = "ament_cmake"
