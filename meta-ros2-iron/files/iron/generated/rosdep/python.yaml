@@ -6561,6 +6561,7 @@ python3-jsonschema:
   fedora: [python3-jsonschema]
   gentoo: [dev-python/jsonschema]
   nixos: [python3Packages.jsonschema]
+  openembedded: [python3-jsonschema@meta-python]
   rhel:
     '*': [python3-jsonschema]
     '7': [python36-jsonschema]
@@ -6959,6 +6960,7 @@ python3-natsort:
   debian: [python3-natsort]
   fedora: [python3-natsort]
   nixos: [python3Packages.natsort]
+  openembedded: [python3-natsort@meta-ros-common]
   opensuse: [python3-natsort]
   rhel: [python3-natsort]
   ubuntu: [python3-natsort]
@@ -7500,6 +7502,7 @@ python3-protobuf:
   fedora: [python3-protobuf]
   gentoo: [dev-python/protobuf-python]
   nixos: [python3Packages.protobuf]
+  openembedded: [python3-protobuf@meta-python]
   rhel:
     '*': [python3-protobuf]
     '7': null
@@ -8424,6 +8427,10 @@ python3-scipy:
   gentoo: [sci-libs/scipy]
   macports: [py37-scipy]
   nixos: [python3Packages.scipy]
+  openembedded:
+    pip:
+      depends: [gfortran]
+      packages: [scipy]
   opensuse: [python3-scipy]
   osx:
     pip:
@@ -9113,6 +9120,7 @@ python3-typeguard:
   debian: [python3-typeguard]
   fedora: [python3-typeguard]
   nixos: [python3Packages.typeguard]
+  openembedded: [python3-typeguard@meta-python]
   osx:
     pip:
       packages: [typeguard]
@@ -9257,6 +9265,7 @@ python3-venv:
   debian: [python3-venv]
   fedora: [python3-libs]
   nixos: [python3]
+  openembedded: [python3-virtualenv@meta-python]
   opensuse: [python3-virtualenv]
   osx:
     pip:
