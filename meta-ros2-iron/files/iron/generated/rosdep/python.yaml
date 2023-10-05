@@ -8427,10 +8427,7 @@ python3-scipy:
   gentoo: [sci-libs/scipy]
   macports: [py37-scipy]
   nixos: [python3Packages.scipy]
-  openembedded:
-    pip:
-      depends: [gfortran]
-      packages: [scipy]
+  openembedded: [python3-scipy@meta-ros-common]
   opensuse: [python3-scipy]
   osx:
     pip:
