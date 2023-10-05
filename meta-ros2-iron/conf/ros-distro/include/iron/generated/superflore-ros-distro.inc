@@ -22,7 +22,7 @@ ROS_SUPERFLORE_GENERATION_NOT_POSSIBLE = ""
 
 # Number of commits that will be returned by "git log meta-ros2-iron/files/iron/generated/cache.yaml" when the
 # generated files are committed. This is used for the fourth version field of DISTRO_VERSION.
-ROS_NUM_CACHE_YAML_COMMITS = "3"
+ROS_NUM_CACHE_YAML_COMMITS = "4"
 
 # Iterated values of ROS_DISTRO-cache.distribution_file.release_platforms.<LINUX-DISTRO>.[ <NAME> ... ] .
 ROS_DISTRO_RELEASE_PLATFORMS = " \
@@ -3585,7 +3585,7 @@ ROS_SUPERFLORE_GENERATED_BUILDTOOLS_IRON = " \
     service-msgs-native \
 "
 
-ROS_SUPERFLORE_GENERATED_BUILDTOOLS:append = " ${ROS_SUPERFLORE_GENERATED_BUILDTOOLS_IRON}"
+ROS_SUPERFLORE_GENERATED_BUILDTOOLS_append = " ${ROS_SUPERFLORE_GENERATED_BUILDTOOLS_IRON}"
 
 ROS_SUPERFLORE_GENERATED_PLATFORM_PACKAGE_DEPENDENCIES = " \
     ${PYTHON_PN}-pydocstyle \
@@ -3644,17 +3644,12 @@ ROS_SUPERFLORE_GENERATED_PLATFORM_PACKAGE_DEPENDENCIES = " \
     ${ROS_UNRESOLVED_DEP-python3-fiona} \
     ${ROS_UNRESOLVED_DEP-python3-git} \
     ${ROS_UNRESOLVED_DEP-python3-img2pdf} \
-    ${ROS_UNRESOLVED_DEP-python3-jsonschema} \
-    ${ROS_UNRESOLVED_DEP-python3-natsort} \
     ${ROS_UNRESOLVED_DEP-python3-ntplib} \
-    ${ROS_UNRESOLVED_DEP-python3-protobuf} \
     ${ROS_UNRESOLVED_DEP-python3-pytest-timeout} \
     ${ROS_UNRESOLVED_DEP-python3-rtree} \
     ${ROS_UNRESOLVED_DEP-python3-scipy} \
     ${ROS_UNRESOLVED_DEP-python3-shapely} \
-    ${ROS_UNRESOLVED_DEP-python3-typeguard} \
     ${ROS_UNRESOLVED_DEP-python3-vcstool-native} \
-    ${ROS_UNRESOLVED_DEP-python3-venv} \
     ${ROS_UNRESOLVED_DEP-python3-zmq} \
     ${ROS_UNRESOLVED_DEP-range-v3} \
     ${ROS_UNRESOLVED_DEP-rti-connext-dds-6.0.1} \
@@ -3770,18 +3765,21 @@ ROS_SUPERFLORE_GENERATED_PLATFORM_PACKAGE_DEPENDENCIES = " \
     python3-future \
     python3-importlib-metadata \
     python3-jinja2 \
+    python3-jsonschema \
     python3-lark-parser \
     python3-lxml \
     python3-matplotlib \
     python3-mock \
     python3-mypy \
     python3-native \
+    python3-natsort \
     python3-netifaces \
     python3-numpy \
     python3-packaging \
     python3-pandas \
     python3-pillow \
     python3-pip \
+    python3-protobuf \
     python3-psutil \
     python3-pybind11 \
     python3-pycairo \
@@ -3808,6 +3806,8 @@ ROS_SUPERFLORE_GENERATED_PLATFORM_PACKAGE_DEPENDENCIES = " \
     python3-tkinter \
     python3-tornado \
     python3-twisted \
+    python3-typeguard \
+    python3-virtualenv \
     python3-websocket-client \
     qhull \
     qtbase \
@@ -4387,17 +4387,12 @@ ROS_UNRESOLVED_DEP-python3-construct = "ROS_UNRESOLVED_DEP-python3-construct"
 ROS_UNRESOLVED_DEP-python3-fiona = "ROS_UNRESOLVED_DEP-python3-fiona"
 ROS_UNRESOLVED_DEP-python3-git = "ROS_UNRESOLVED_DEP-python3-git"
 ROS_UNRESOLVED_DEP-python3-img2pdf = "ROS_UNRESOLVED_DEP-python3-img2pdf"
-ROS_UNRESOLVED_DEP-python3-jsonschema = "ROS_UNRESOLVED_DEP-python3-jsonschema"
-ROS_UNRESOLVED_DEP-python3-natsort = "ROS_UNRESOLVED_DEP-python3-natsort"
 ROS_UNRESOLVED_DEP-python3-ntplib = "ROS_UNRESOLVED_DEP-python3-ntplib"
-ROS_UNRESOLVED_DEP-python3-protobuf = "ROS_UNRESOLVED_DEP-python3-protobuf"
 ROS_UNRESOLVED_DEP-python3-pytest-timeout = "ROS_UNRESOLVED_DEP-python3-pytest-timeout"
 ROS_UNRESOLVED_DEP-python3-rtree = "ROS_UNRESOLVED_DEP-python3-rtree"
 ROS_UNRESOLVED_DEP-python3-scipy = "ROS_UNRESOLVED_DEP-python3-scipy"
 ROS_UNRESOLVED_DEP-python3-shapely = "ROS_UNRESOLVED_DEP-python3-shapely"
-ROS_UNRESOLVED_DEP-python3-typeguard = "ROS_UNRESOLVED_DEP-python3-typeguard"
 ROS_UNRESOLVED_DEP-python3-vcstool-native = "ROS_UNRESOLVED_DEP-python3-vcstool-native"
-ROS_UNRESOLVED_DEP-python3-venv = "ROS_UNRESOLVED_DEP-python3-venv"
 ROS_UNRESOLVED_DEP-python3-zmq = "ROS_UNRESOLVED_DEP-python3-zmq"
 ROS_UNRESOLVED_DEP-range-v3 = "ROS_UNRESOLVED_DEP-range-v3"
 ROS_UNRESOLVED_DEP-rti-connext-dds-6.0.1 = "ROS_UNRESOLVED_DEP-rti-connext-dds-6.0.1"
@@ -4413,7 +4408,7 @@ ROS_UNRESOLVED_DEP-xtensor = "ROS_UNRESOLVED_DEP-xtensor"
 ROS_DISTRO_RELEASE_DATE = "2023-05-23"
 
 # The commit of ros/rosdistro/iron/distribution.yaml from which the recipes were generated.
-ROS_SUPERFLORE_GENERATION_COMMIT = "f86df4a050a4a492e3ea78e91f83581b965d810b"
+ROS_SUPERFLORE_GENERATION_COMMIT = "caca4bd7d9ed64866d425cb8f9cc78e6e510704e"
 
 # Version of scripts/ros-generate-cache.sh which was used to generate cache from which the recipes and this configuration
 # file were last generated

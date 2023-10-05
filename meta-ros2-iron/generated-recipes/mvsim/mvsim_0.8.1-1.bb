@@ -16,14 +16,14 @@ ROS_CN = "mvsim"
 ROS_BPN = "mvsim"
 
 ROS_BUILD_DEPENDS = " \
-    ${ROS_UNRESOLVED_DEP-python3-protobuf} \
-    ${ROS_UNRESOLVED_DEP-python3-venv} \
     ament-cmake-xmllint \
     boost \
     mrpt2 \
     nav-msgs \
     protobuf \
+    python3-protobuf \
     python3-pybind11 \
+    python3-virtualenv \
     ros-environment \
     sensor-msgs \
     tf2 \
@@ -42,13 +42,13 @@ ROS_BUILDTOOL_DEPENDS = " \
 "
 
 ROS_EXPORT_DEPENDS = " \
-    ${ROS_UNRESOLVED_DEP-python3-protobuf} \
-    ${ROS_UNRESOLVED_DEP-python3-venv} \
     boost \
     mrpt2 \
     nav-msgs \
     protobuf \
+    python3-protobuf \
     python3-pybind11 \
+    python3-virtualenv \
     sensor-msgs \
     tf2 \
     tf2-geometry-msgs \
@@ -61,13 +61,13 @@ ROS_EXPORT_DEPENDS = " \
 ROS_BUILDTOOL_EXPORT_DEPENDS = ""
 
 ROS_EXEC_DEPENDS = " \
-    ${ROS_UNRESOLVED_DEP-python3-protobuf} \
-    ${ROS_UNRESOLVED_DEP-python3-venv} \
     boost \
     mrpt2 \
     nav-msgs \
     protobuf \
+    python3-protobuf \
     python3-pybind11 \
+    python3-virtualenv \
     ros2launch \
     sensor-msgs \
     tf2 \
