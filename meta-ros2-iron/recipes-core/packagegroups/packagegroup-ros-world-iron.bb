@@ -97,7 +97,9 @@ ROS_SUPERFLORE_GENERATED_WORLD_PACKAGES_DEPENDING_ON_LIBOMP = " \
     moveit-planners-ompl \
     moveit-planners \
     moveit-ros \
+    moveit-ros-perception \
     moveit-runtime \
+    moveit \
 "
 
 # Can't build these until we figure out how to build clang-format, clang-tidy without building all of clang.
