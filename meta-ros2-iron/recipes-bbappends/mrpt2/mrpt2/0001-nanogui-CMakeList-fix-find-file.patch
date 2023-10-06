@@ -1,0 +1,26 @@
+From 42f98bebdb3f1276598bb3be7db9b19febf951b7 Mon Sep 17 00:00:00 2001
+From: OpenEmbedded <oe.patch@oe>
+Date: Fri, 6 Oct 2023 17:54:06 +0000
+Subject: [PATCH] %% original patch: 001-nanogui-CMakeList-fix-find-file.patch
+
+---
+ 3rdparty/nanogui/CMakeLists.txt | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/3rdparty/nanogui/CMakeLists.txt b/3rdparty/nanogui/CMakeLists.txt
+index 99f36f87..9075fe33 100644
+--- a/3rdparty/nanogui/CMakeLists.txt
++++ b/3rdparty/nanogui/CMakeLists.txt
+@@ -265,9 +265,9 @@ endif()
+ # * Roboto-Bold.ttf,  Roboto-Regular.ttf => apt install fonts-roboto-fontface
+ # * entypo+ is a custom font from: https://github.com/svenevs/nanogui-entypo
+ #   (it is NOT the same one as provided by the entypo debian package)
+-find_file(ENTYPO_TTF_FILE           entypo.ttf          PATHS "${CMAKE_CURRENT_SOURCE_DIR}/resources" REQUIRED)
+-find_file(ROBOTO_BOLD_TTF_FILE      Roboto-Bold.ttf     PATHS /usr/share/fonts/truetype/roboto-fontface/roboto/ "${CMAKE_CURRENT_SOURCE_DIR}/resources" REQUIRED)
+-find_file(ROBOTO_REGULAR_TTF_FILE   Roboto-Regular.ttf  PATHS /usr/share/fonts/truetype/roboto-fontface/roboto/ "${CMAKE_CURRENT_SOURCE_DIR}/resources" REQUIRED)
++find_file(ENTYPO_TTF_FILE           entypo.ttf          PATHS "${CMAKE_CURRENT_SOURCE_DIR}/resources" REQUIRED NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
++find_file(ROBOTO_BOLD_TTF_FILE      Roboto-Bold.ttf     PATHS /usr/share/fonts/truetype/roboto-fontface/roboto/ "${CMAKE_CURRENT_SOURCE_DIR}/resources" REQUIRED NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
++find_file(ROBOTO_REGULAR_TTF_FILE   Roboto-Regular.ttf  PATHS /usr/share/fonts/truetype/roboto-fontface/roboto/ "${CMAKE_CURRENT_SOURCE_DIR}/resources" REQUIRED NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
+ 
+ # Glob up resource files
+ set(resources ${ENTYPO_TTF_FILE} ${ROBOTO_BOLD_TTF_FILE} ${ROBOTO_REGULAR_TTF_FILE})

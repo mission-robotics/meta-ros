@@ -1,0 +1,23 @@
+From b7a0ce24b06e6856a33bdd156301706d9a91970a Mon Sep 17 00:00:00 2001
+From: OpenEmbedded <oe.patch@oe>
+Date: Fri, 6 Oct 2023 17:54:06 +0000
+Subject: [PATCH] %% original patch:
+ 002-nanflann-CMakeList-fix-check-for-compilers.patch
+
+---
+ 3rdparty/nanoflann/CMakeLists.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/3rdparty/nanoflann/CMakeLists.txt b/3rdparty/nanoflann/CMakeLists.txt
+index 5ea294f1..ee312fd5 100644
+--- a/3rdparty/nanoflann/CMakeLists.txt
++++ b/3rdparty/nanoflann/CMakeLists.txt
+@@ -15,6 +15,8 @@ string(REGEX REPLACE "0x.(.).*" "\\1" NANOFLANN_VERSION_MINOR "${NANOFLANN_VERSI
+ string(REGEX REPLACE "0x..(.).*" "\\1" NANOFLANN_VERSION_PATCH "${NANOFLANN_VERSION_HEX}" )
+ mark_as_advanced(STR_HPP CMAKE_VERSION_LINE NANOFLANN_VERSION_HEX NANOFLANN_VERSION_MAJOR NANOFLANN_VERSION_MINOR NANOFLANN_VERSION_PATCH)
+ 
++set(CMAKE_C_COMPILER_WORKS 1)
++set(CMAKE_CXX_COMPILER_WORKS 1)
+ project(nanoflann VERSION "${NANOFLANN_VERSION_MAJOR}.${NANOFLANN_VERSION_MINOR}.${NANOFLANN_VERSION_PATCH}")
+ 
+ message(STATUS "nanoflann version: ${NANOFLANN_VERSION_MAJOR}.${NANOFLANN_VERSION_MINOR}.${NANOFLANN_VERSION_PATCH}")

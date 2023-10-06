@@ -1,0 +1,23 @@
+From 15b484bf9a02b758be2f3d666886eb8ab7513f6d Mon Sep 17 00:00:00 2001
+From: OpenEmbedded <oe.patch@oe>
+Date: Fri, 6 Oct 2023 19:02:37 +0000
+Subject: [PATCH] %% original patch: 0005-patch-mathplot-cpp.patch
+
+---
+ libs/gui/src/mathplots/mathplot.cpp | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/libs/gui/src/mathplots/mathplot.cpp b/libs/gui/src/mathplots/mathplot.cpp
+index f2bb6868..83e0a34b 100644
+--- a/libs/gui/src/mathplots/mathplot.cpp
++++ b/libs/gui/src/mathplots/mathplot.cpp
+@@ -2984,6 +2984,9 @@ bool mpPrintout::HasPage(int page) { return (page == 1); }
+ //-----------------------------------------------------------------------------
+ // mpMovableObject - provided by Jose Luis Blanco
+ //-----------------------------------------------------------------------------
++
++mpMovableObject::~mpMovableObject() {}
++
+ void mpMovableObject::TranslatePoint(
+ 	double x, double y, double& out_x, double& out_y)
+ {

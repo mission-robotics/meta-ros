@@ -1,0 +1,22 @@
+From b9997e3b60d2b10b24efed6d0ec2218b277a23cb Mon Sep 17 00:00:00 2001
+From: OpenEmbedded <oe.patch@oe>
+Date: Fri, 6 Oct 2023 17:54:06 +0000
+Subject: [PATCH] %% original patch:
+ 003-libfyaml-fix-script_libfyaml-for-sysroot.patch
+
+---
+ cmakemodules/script_libfyaml.cmake | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/cmakemodules/script_libfyaml.cmake b/cmakemodules/script_libfyaml.cmake
+index 89c0a9ab..34ede3f1 100644
+--- a/cmakemodules/script_libfyaml.cmake
++++ b/cmakemodules/script_libfyaml.cmake
+@@ -45,6 +45,7 @@ if(MRPT_HAS_LIBFYAML)
+ 			-DCMAKE_BUILD_TYPE:STRING=${CMAKE_BUILD_TYPE}
+ 			-DBUILD_SHARED_LIBS:BOOL=OFF
+ 			-DCMAKE_INSTALL_PREFIX:PATH=<INSTALL_DIR>
++			-DCMAKE_SYSROOT=${CMAKE_SYSROOT}
+ 			-DCMAKE_INSTALL_LIBDIR=${CMAKE_INSTALL_LIBDIR}
+ 			-DCMAKE_C_COMPILER=${CMAKE_C_COMPILER}
+ 			-DCMAKE_CXX_COMPILER=${CMAKE_CXX_COMPILER}

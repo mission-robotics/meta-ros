@@ -1,0 +1,22 @@
+From 4a5664ba801133328b0a0baaff095ef4cd1c7216 Mon Sep 17 00:00:00 2001
+From: OpenEmbedded <oe.patch@oe>
+Date: Fri, 6 Oct 2023 17:54:06 +0000
+Subject: [PATCH] %% original patch: 004-patch-mathplot.patch
+
+---
+ libs/gui/include/mrpt/3rdparty/mathplot/mathplot.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/libs/gui/include/mrpt/3rdparty/mathplot/mathplot.h b/libs/gui/include/mrpt/3rdparty/mathplot/mathplot.h
+index 83fe4593..48f2be39 100644
+--- a/libs/gui/include/mrpt/3rdparty/mathplot/mathplot.h
++++ b/libs/gui/include/mrpt/3rdparty/mathplot/mathplot.h
+@@ -1684,7 +1684,7 @@ class WXDLLIMPEXP_MATHPLOT mpMovableObject : public mpLayer
+ 	 */
+ 	mpMovableObject() : m_shape_xs(0), m_shape_ys(0) { m_type = mpLAYER_PLOT; }
+ 
+-	~mpMovableObject() override = default;
++	~mpMovableObject() override {};
+ 
+ 	/** Get the current coordinate transformation.
+ 	 */
