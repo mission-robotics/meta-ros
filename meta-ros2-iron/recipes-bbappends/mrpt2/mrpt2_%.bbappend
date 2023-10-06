@@ -1,4 +1,4 @@
-inherit python3native ros_ament_cmake pkgconfig
+inherit python3native ros_ament_cmake pkgconfig ros_insane_dev_so
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/${BPN}:"
 SRC_URI:append = " file://0001-nanogui-CMakeList-fix-find-file.patch \
@@ -8,13 +8,7 @@ SRC_URI:append = " file://0001-nanogui-CMakeList-fix-find-file.patch \
                    file://0005-patch-mathplot-cpp.patch \
 "
 
-# file://003-libfyaml-CMakeList-fix-check-for-compilers.patch 
-
 ROS_BUILD_DEPENDS:remove = "${ROS_UNRESOLVED_DEP-libopenni2-dev}"
-
-# EXTRA_OECMAKE:append = "-DCMAKE_STAGING_PREFIX=${S}/foobar/"
-# export CMAKE_PREFIX_PATH ="${S}/foobar/"
-# export entypo.ttf_ROOT = "${S}/foobar/"
 
 DEPENDS:append = " \
     qtbase \
@@ -22,4 +16,15 @@ DEPENDS:append = " \
     ament-package-native \
     ament-cmake-native \
     rosidl-typesupport-c-native \
+"
+
+PREFERRED_VERSION_libfreenect = "0.5.%"
+
+RDEPENDS:${PN} = " \
+    libfreenect "
+
+FILES:${PN} += "/usr/share/mrpt/* \
+                /usr/share/metainfo/* \
+                /usr/share/mime/* \
+                /usr/share/nanoflann/* \
 "
