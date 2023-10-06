@@ -16,7 +16,7 @@ index 83fe4593..48f2be39 100644
  	mpMovableObject() : m_shape_xs(0), m_shape_ys(0) { m_type = mpLAYER_PLOT; }
  
 -	~mpMovableObject() override = default;
-+	~mpMovableObject() override {};
++	~mpMovableObject() override;
  
  	/** Get the current coordinate transformation.
  	 */
