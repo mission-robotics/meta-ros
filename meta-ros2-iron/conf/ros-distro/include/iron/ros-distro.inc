@@ -151,6 +151,9 @@ ROS_WORLD_SKIP_GROUPS += "${@bb.utils.contains('BBFILE_COLLECTIONS', 'rust-layer
 # swri recipes depending on marti-*-msgs, currently broken after to https://github.com/ros/rosdistro/commit/e019cc8729e7ff2ba2ed51e63886734936254111
 ROS_WORLD_SKIP_GROUPS += "swri"
 
+# depending on ocl-icd-opencl
+ROS_WORLD_SKIP_GROUPS += "ocl-icd-opencl"
+
 # do_configure failures
 ROS_WORLD_SKIP_GROUPS += " \
     lanelet2-traffic-rules \
@@ -160,9 +163,9 @@ ROS_WORLD_SKIP_GROUPS += " \
 # do_compile failures
 ROS_WORLD_SKIP_GROUPS += " \
     lanelet2-core \
-    qt-gui-cpp \
     self-test \
 "
+
 
 # Must use a _pn- override in this file to override the ROS_BUILD_TYPE of a generated recipe,
 # because we need to set this variable before the "inherit" line in the recipe is parsed,
