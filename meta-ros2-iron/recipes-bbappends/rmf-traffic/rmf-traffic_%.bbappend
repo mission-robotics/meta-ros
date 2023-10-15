@@ -2,3 +2,7 @@
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/${BPN}:"
 SRC_URI += "file://0001-schedule-fix-get_participant-declaration-to-match-Vi.patch"
+
+FILES:${PN}:prepend = " \
+    ${datadir}/ament_index \
+"

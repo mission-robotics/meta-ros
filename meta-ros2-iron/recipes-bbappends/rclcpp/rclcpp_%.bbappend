@@ -7,3 +7,6 @@ ROS_BUILDTOOL_DEPENDS += " \
     python3-numpy-native \
 "
 
+ROS_EXPORT_DEPENDS += " \
+    python3-numpy-native \
+"

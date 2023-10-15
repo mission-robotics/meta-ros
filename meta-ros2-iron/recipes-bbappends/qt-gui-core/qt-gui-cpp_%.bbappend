@@ -12,6 +12,18 @@
 # |   Unknown CMake command "qt5_wrap_cpp".
 inherit ${@bb.utils.contains_any('ROS_WORLD_SKIP_GROUPS', ['qt5', 'pyqt5'], '', 'cmake_qt5', d)}
 
+inherit python3native
+
 # | CMake Warning at ros2-foxy-dunfell/tmp-glibc/work/core2-64-oe-linux/qt-gui-cpp/1.0.8-1-r0/recipe-sysroot/usr/share/python_qt_binding/cmake/sip_helper.cmake:27 (message):
 # |   SIP binding generator NOT available.
-DEPENDS += "sip3-native"
+DEPENDS += " \
+    python3-pyqt5-native \
+    python3-pyqt5-sip-native python-qt-binding \
+    sip3-native \
+    sip3 \
+"
+
+export PYTHON_SITEPACKAGES_DIR = "${STAGING_DIR_TARGET}${libdir}/${PYTHON_DIR}/site-packages"
+
+CXXFLAGS:append = " -I${STAGING_DIR_NATIVE}/usr/include/QtCore -I${STAGING_DIR_NATIVE}/usr/include/QtWidgets"
+OECMAKE_CXX_FLAGS:append = " -I${STAGING_DIR_NATIVE}/usr/include/QtCore -I${STAGING_DIR_NATIVE}/usr/include/QtWidgets"
